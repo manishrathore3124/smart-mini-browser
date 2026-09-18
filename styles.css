@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #1e1e2e;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #2a2a3d;
+  border-bottom: 1px solid #444;
+}
+
+.toolbar button {
+  padding: 6px 12px;
+  background: #3a3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toolbar button:hover {
+  background: #5a5aff;
+}
+
+#urlBar {
+  flex: 1;
+  padding: 7px 12px;
+  border-radius: 20px;
+  border: none;
+  background: #13131f;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Tab Bar */
+.tab-bar {
+  display: flex;
+  align-items: center;
+  background: #22223a;
+  padding: 4px 8px;
+  gap: 6px;
+}
+
+.tab {
+  padding: 5px 16px;
+  background: #3a3a5c;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.tab.active {
+  background: #5a5aff;
+}
+
+#newTabBtn {
+  background: #3a3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Main Content Area */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Webview */
+webview {
+  flex: 1;
+  border: none;
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background: #2a2a3d;
+  border-left: 1px solid #444;
+  padding: 12px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  display: none;
+}
+
+.sidebar.open {
+  display: block;
+}
+
+.sidebar-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sidebar-tabs button {
+  flex: 1;
+  padding: 6px;
+  background: #3a3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar-tabs button:hover {
+  background: #5a5aff;
+}
+
+.panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.panel ul li {
+  padding: 8px;
+  background: #13131f;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  word-break: break-all;
+}
+
+.panel ul li:hover {
+  background: #5a5aff;
+}
+
+/* Force Light Mode */
+body.light {
+  background: #f0f0f0 !important;
+  color: #000 !important;
+}
+
+body.light .toolbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+body.light .tab-bar {
+  background: #e0e0e0 !important;
+}
+
+body.light .sidebar {
+  background: #ffffff !important;
+  border-left: 1px solid #ccc !important;
+}
+
+body.light #urlBar {
+  background: #ffffff !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+}
+
+body.light .toolbar button,
+body.light #newTabBtn,
+body.light .sidebar-tabs button,
+body.light .panel ul li {
+  background: #e0e0e0 !important;
+  color: #000 !important;
+}
+
+body.light .tab.active {
+  background: #5a5aff !important;
+  color: #fff !important;
+}

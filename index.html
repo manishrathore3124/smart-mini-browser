@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bingo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button id="backBtn">&#8592;</button>
+    <button id="forwardBtn">&#8594;</button>
+    <button id="reloadBtn">&#8635;</button>
+    <input type="text" id="urlBar" placeholder="Enter URL or search..." />
+    <button id="goBtn">Go</button>
+    <button id="bookmarkBtn">&#9733; Bookmark</button>
+    <button id="darkModeBtn">🌙 Dark</button>
+    <button id="sidebarBtn">📌 Panel</button>
+    <button id="voiceBtn">🎤 Voice</button>
+  </div>
+
+  <!-- Tab Bar -->
+  <div class="tab-bar">
+    <div class="tab active" id="tab1">New Tab</div>
+    <button id="newTabBtn">+</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Browser View -->
+    <webview id="browser" src="https://www.google.com" allowpopups></webview>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-tabs">
+        <button onclick="showPanel('bookmarks')">⭐ Bookmarks</button>
+        <button onclick="showPanel('history')">🕘 History</button>
+      </div>
+      <div id="bookmarksPanel" class="panel">
+        <h3>Bookmarks</h3>
+        <ul id="bookmarkList"></ul>
+      </div>
+      <div id="historyPanel" class="panel" style="display:none">
+        <h3>History</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

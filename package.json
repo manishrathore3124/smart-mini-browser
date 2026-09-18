@@ -1,0 +1,31 @@
+{
+  "name": "smart-mini-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron --enable-speech-input --enable-features=WebSpeechAPI .",
+    "build": "electron-builder --win --x64"
+},
+"build": {
+    "appId": "com.smartminibrowser.app",
+    "productName": "Smart Mini Browser",
+    "win": {
+      "target": "nsis",
+      "icon": ""
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache"
+    ]
+},
+  "keywords": [],
+  "author": "Manish Rathore",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^42.4.0",
+    "electron-builder": "^26.15.3"
+  }
+}

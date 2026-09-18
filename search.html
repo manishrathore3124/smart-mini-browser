@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Bingo Search</title>
+  
+    
+  <link rel="stylesheet" href="search.css" />
+</head>
+<body>
+    <button id="themeBtn" onclick="toggleTheme()">☀️ Light</button>
+  <!-- Search Page -->
+  <div class="search-page" id="searchPage">
+    <div class="logo">Bingo</div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search anything..." autofocus/>
+      <button onclick="doSearch()">Search</button>
+    </div>
+  </div>
+
+  <!-- Results Page -->
+  <div class="results-page" id="resultsPage">
+    <div class="results-header">
+      <div class="results-logo" onclick="goHome()">Bingo</div>
+      <div class="results-search-box">
+        <input type="text" id="resultsInput" placeholder="Search..."/>
+        <button onclick="doSearchFromResults()">Search</button>
+      </div>
+    </div>
+    <div class="result-count" id="resultCount"></div>
+    <div id="resultsList"></div>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>
